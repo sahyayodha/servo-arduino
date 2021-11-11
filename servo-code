@@ -1,0 +1,24 @@
+#include <Servo.h>
+
+int servoPin = 18;
+Servo myservo;
+int pos = 0;
+
+void setup() {
+  Serial.begin(9600);
+  myservo.attach(servoPin);
+  myservo.write(180); //as you can see im triggering the servo to work using void setup
+  delay(200);
+  myservo.write(90);
+  myservo.write(180);
+  delay(200);
+  myservo.write(90);
+}
+
+void loop() {
+                                          
+    myservo.write(180); //change the value to what you like
+    delay(500);                                     
+    myservo.write(133);  //change the value to what you like
+delay(3000);
+}
